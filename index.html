@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="querries.css" />
+    <script type="module" src="script.js"></script>
+
+    <title>Weather</title>
+  </head>
+  <body>
+    <p class="center error"></p>
+    <header class="header">
+      <form class="form">
+        <div class="form-control">
+          <input
+            type="text"
+            class="input-city"
+            placeholder="enter city / click on map"
+          />
+          <button type="submit">
+            <i class="fi fi-br-search"></i>
+          </button>
+        </div>
+      </form>
+    </header>
+
+    <main>
+      <div class="main__container">
+        <div class="inner__container--current">
+          <div id="map"></div>
+          <div class="inner__container--content"></div>
+        </div>
+
+        <div class="inner__container--forecast">
+          <div class="wrap">
+            <h2 class="forecast__title today">Today Forecast</h2>
+            <h2 class="forecast__title daily">Daily Forecast</h2>
+
+            <div class="today__container"></div>
+            <div class="daily__container"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
