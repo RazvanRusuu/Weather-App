@@ -25,7 +25,10 @@ class WeatherApp {
         this.#currentCoords = [lat, lng];
         this.#renderMap(this.#currentCoords);
       })
-      .catch((err) => alert(err));
+      .catch((err) => {
+        console.log(err);
+        this.#renderMap([46.77, 23.59]);
+      });
   }
 
   async #renderMap(coords) {
