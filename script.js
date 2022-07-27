@@ -113,6 +113,7 @@ class WeatherApp {
 
   // prettier-ignore
   #displayWeather(city, container) {
+    console.log(city)
     const {weather: [{icon}], main:{temp}, dt_txt: timeStamp} = city;
     const cityHour = new Date(timeStamp).getHours();
     const cityDay = new Date(timeStamp).getDay();
@@ -131,8 +132,9 @@ class WeatherApp {
     dailyContainerEl.innerHTML = "";
     todayContainerEl.innerHTML = "";
     const currentDay = this.#date.getDate();
-    const arr = cityForecast.list;
-    const todayArr = arr.filter((hour) => {
+    const hoursList = cityForecast.list;
+
+    const todayArr = hoursList.filter((hour) => {
       const day = new Date(hour.dt_txt).getDate();
       return currentDay === day;
     });
